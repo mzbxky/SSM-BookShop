@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fc.dao.BookTypeMapper">
+    <cache/>
+    <resultMap id="BaseResultMap" type="com.fc.entity.Booktype">
+        <id column="bt_id" jdbcType="INTEGER" property="btid"/>
+        <result column="bt_name" jdbcType="VARCHAR" property="btname"/>
+    </resultMap>
+
+    <select id="findTypesInfo" resultMap="BaseResultMap">
+        select *
+        from booktype
+        group by bt_id;
+    </select>
+
+    <insert id="add" >
+        insert into booktype(bt_name) values (#{typeName})
+    </insert>
+
+    <delete id="delete">
+        delete from booktype where  bt_id = #{id}
+    </delete>
+
+    <update id="update" >
+        update booktype set bt_name = #{btname} where bt_id = #{btid}
+    </update>
+
+
+</mapper>
