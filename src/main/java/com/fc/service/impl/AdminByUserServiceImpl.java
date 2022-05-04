@@ -2,7 +2,7 @@ package com.fc.service.impl;
 
 import com.fc.dao.UserMapper;
 import com.fc.entity.User;
-import com.fc.service.UserService;
+import com.fc.service.AdminByUserService;
 import com.fc.vo.PageVO;
 import com.fc.vo.UserVO;
 import com.github.pagehelper.PageHelper;
@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class AdminByUserServiceImpl implements AdminByUserService {
     @Autowired
     private UserMapper userMapper;
     @Override

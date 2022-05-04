@@ -5,7 +5,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 
-public interface UserService {
+public interface AdminByUserService {
 
     ModelAndView userAdd(ModelAndView mv, HttpSession session, User user);
 
